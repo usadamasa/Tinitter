@@ -5,6 +5,10 @@ class TimeLine
 {
     public function show ()
     {
-        echo "Hello, World!";
+        $app = \Slim\Slim::getInstance();
+        $app->render(
+            'index.twig',
+            ['display_text'=>"Hello, World!"]
+        );
     }
 }
