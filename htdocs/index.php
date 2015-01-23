@@ -7,9 +7,7 @@ require '../vendor/autoload.php';
 $app = new \Slim\Slim([]);
 
 // dispatch root
-$app->get('/', function () {
-    echo "Hello, world";
-});
+\Tinitter\Route::registration($app);
 
 // execute
 $app->run();
