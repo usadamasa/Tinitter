@@ -6,6 +6,9 @@ require '../config.php';
 // load library
 require '../vendor/autoload.php';
 
+// setup DB connection
+\Base\DB::registerIlluminate($db_settings);
+
 // initialize Slim
 $app = new \Slim\Slim([
     'templates.path'    => TEMPLATES_DIR_PATH,
