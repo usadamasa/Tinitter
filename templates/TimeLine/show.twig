@@ -2,5 +2,17 @@
 {% block content %}
 {% autoescape true %}
 {% include "_Parts/Form.twig" %}
+
+{% for post in post_list %}
+    <div class="postcell">
+        <div class="body">{{ post.body | nl2br }}</div>
+        <div class="info">
+            post by <span class="nickname">{{ post.nickname }}</span>
+            <span class="date">({{ post.created_at }})</span>
+        </div>
+    </div>
+
+{% endfor %}
+
 {% endautoescape %}
 {% endblock %}
