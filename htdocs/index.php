@@ -1,5 +1,8 @@
 <?php
 
+// CSRF Guard用にセッションを開始
+session_start();
+
 // load config
 require '../config.php';
 

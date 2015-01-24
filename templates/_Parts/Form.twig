@@ -2,6 +2,7 @@
 <div class="postform">
     <h3>投稿フォーム</h3>
     <form method="post" action="/post/commit">
+        <input type="hidden" name="{{csrf_key}}" value="{{csrf_token}}">
         <div class="form-group {% if error_list.nickname %}has-error{% endif %}">
             <label>ニックネーム<em>(半角英数16文字まで)</em></label><br>
             <input type="text" name="nickname" value="{{ params.nickname }}" placeholder="ニックネームを入力してください" class="form-control">
