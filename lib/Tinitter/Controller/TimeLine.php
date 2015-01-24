@@ -7,8 +7,7 @@ class TimeLine
     {
         $app = \Slim\Slim::getInstance();
         $app->render(
-            'index.twig',
-            ['display_text'=>"Hello, World!"]
+            'TimeLine/show.twig'
         );
     }
 }
