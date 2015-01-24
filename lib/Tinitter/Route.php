@@ -3,6 +3,9 @@ namespace Tinitter;
 
 class Route{
     static function registration($app){
+        // use CSRF Guard
+        $app->add( new \Slim\Extras\Middleware\CsrfGuard() );
+
         // トップページ
         $app->get('/', '\Tinitter\Controller\TimeLine:show');
 
