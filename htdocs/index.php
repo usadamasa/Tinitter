@@ -15,7 +15,7 @@ require '../vendor/autoload.php';
 // initialize Slim
 $app = new \Slim\Slim([
     'templates.path'    => TEMPLATES_DIR_PATH,
-    'view'              => new \Slim\Views\Twig()
+    'view'              => new \Slim\Views\Twig(),
 ]);
 
 // dispatch root
