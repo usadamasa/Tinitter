@@ -12,6 +12,8 @@ class Post
         $params     = $app->request->params();
         $error_list = V_Post::byArray($params);
 
+        $app->log->debug(print_r($params, true));
+
         if (!empty($error_list)) {
             $app->render(
                 'TimeLine/show.twig',

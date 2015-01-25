@@ -16,6 +16,7 @@ require '../vendor/autoload.php';
 $app = new \Slim\Slim([
     'templates.path'    => TEMPLATES_DIR_PATH,
     'view'              => new \Slim\Views\Twig(),
+    'log_level'         => LOG_LEVEL,
 ]);
 
 // dispatch root
