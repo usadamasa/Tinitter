@@ -1,10 +1,11 @@
 <?php
 namespace Tinitter\Controller;
-use \Tinitter\Model\Post as M_Post;
+
+use Tinitter\Model\Post as M_Post;
 
 class TimeLine
 {
-    public function show ($page_num=1)
+    public function show($page_num = 1)
     {
         $app = \Slim\Slim::getInstance();
 
